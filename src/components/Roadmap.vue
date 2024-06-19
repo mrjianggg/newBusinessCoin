@@ -1,11 +1,11 @@
 <template>
   <!-- NBC Token -->
   <div class="pt-[120px] <xl:pt-[50px] RoadmapBox" id="roadmapId">
-    <div class="title1 <xl:pl-[20px] mx-auto my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">NBC DEVELOPMENT</div>
-    <div class="title1 <xl:pl-[20px] mx-auto my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">ROADMAP</div>
-    <div class="title1 <xl:pl-[20px] mx-auto my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC发展规划</div>
+    <div class="title1 <xl:pl-[20px] my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">NBC DEVELOPMENT</div>
+    <div class="title1 <xl:pl-[20px] my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">ROADMAP</div>
+    <div class="title1 <xl:pl-[20px] my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC发展规划</div>
     <div class="mt-3  <xl:pl-[20px] <xl:mt-0 text-[#EAECEF] text-lg <xl:text-[14px] <xl:leading-[20px] font-medium leading-[30px]">{{ $t('roadmap.Strategicplans') }}</div>
-    <div class="xl:block w-full mt-[30px] pl-[20px]">
+    <div class="xl:hidden w-full mt-[30px] pl-[20px]">
       <van-swipe :loop="false" :show-indicators="false" :width="300"> 
         <van-swipe-item v-for="(item, index) in itemsAll" :key="index">
           <div style="border-radius: 10px; border: 1px #222222 solid;" class="h-[200px] w-[240px] px-[15px] pt-[15px]">

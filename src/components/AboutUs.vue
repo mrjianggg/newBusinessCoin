@@ -12,7 +12,7 @@
       </div>
 
       <div class="mt-10 <xl:mt-[30px] mx-auto flex items-center justify-center">
-        <div class="w-[168px] <xl:w-[108px] h-[52px] <xl:h-[44px] rounded-[30px] <xl:rounded-[22px] bg-[#FFEE02] cursor-pointer font-semibold text-black text-base <xl:text-[13px] flex items-center justify-center">{{ $t('AboutUs.Building') }}</div>
+        <div @click="openPdf()" class="w-[168px] <xl:w-[108px] h-[52px] <xl:h-[44px] rounded-[30px] <xl:rounded-[22px] bg-[#FFEE02] cursor-pointer font-semibold text-black text-base <xl:text-[13px] flex items-center justify-center">{{ $t('AboutUs.Building') }}</div>
         <div style="border: 1px solid #323232;" class="w-[168px] <xl:w-[108px] h-[52px] <xl:h-[44px] rounded-[30px] <xl:rounded-[22px] cursor-pointer font-semibold text-white <xl:text-[13px] text-base flex items-center justify-center ml-4">{{ $t('AboutUs.LearnMore') }}</div>
       </div>
 
@@ -63,8 +63,14 @@ export default defineComponent({
         observer.disconnect();
       }
     });
+    const openPdf =()=>{
+      // 使用相对路径来引用 PDF 文件
+      const pdfPath = '/whitepaper.pdf';
+      // 打开 PDF 文件
+      window.open(pdfPath, '_blank');
+    }
     return {
-      
+      openPdf
     };
   }
 });

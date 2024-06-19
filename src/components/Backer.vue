@@ -3,8 +3,8 @@
   <div class="pt-[178px] <xl:pl-[20px] <xl:pt-[28px] mt-[100px] <xl:mt-[40px] BackerBox" id="backerId">
     <div class="title1 font-bold text-[30px] <xl:text-[22px] <xl:leading-[30px] leading-[48px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">THE ECOSYSTEM</div>
     <div class="title2 mt-2 font-bold text-[40px] <xl:text-[22px] <xl:leading-[28px] leading-[60px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">BACKED BY THE BEST</div>
-    <div class="title1 font-bold text-[30px] <xl:text-[22px] <xl:leading-[48px] leading-[48px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC投资者生态系统</div>
-    <div class="mt-3 <xl:mt-0 text-lg <xl:text-[14px] font-normal text-[#EAECEF] <xl:text-left <xl:w-full" v-if="$i18n.locale !== 'en'">成为全球金融变革的推动者，探索无限机遇</div>
+    <div class="title1 font-bold text-[40px] <xl:text-[22px] <xl:leading-[48px] leading-[48px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC分布式商业生态系统</div>
+    <div class="mt-3 <xl:mt-0 text-lg <xl:text-[14px] font-normal text-[#EAECEF] <xl:text-left <xl:w-full" v-if="$i18n.locale !== 'en'">成为全球金融生态变革的推动者，探索人类财富伟大机遇</div>
     <div class="xl:hidden mt-[60px] <xl:mt-[0px] w-full flex items-center">
       <div class="infoBox scrolling-container mt-6 px-[125px] <xl:px-[15px] <xl:px-[15px] py-[65px] <xl:py-[15px]" ref="buttonsContainer">
         <div class="scrolling-wrapper" ref="scrollingWrapper">

@@ -5,9 +5,9 @@
     <img src="@/assets/img/icon_text.png" class="w-[132px] h-[34px] mt-[79px] <xl:hidden" />
     <div class="mt-[15px] <xl:mt-[0] flex justify-between <xl:block">
       <div>
-        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale === 'en'">Learn How New Business Coin Works</div>
-        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">NBC通证AI系统通过神经网络和</div>
-        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">大数据驱动生态系统，量化价值和信任。</div>
+        <div class="title2 text-[28px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale === 'en'">Learn How New Business Coin Works</div>
+        <div class="title2 text-[28px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">NBC通证AI系统通过分布式商业网络</div>
+        <div class="title2 text-[28px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">和大数据驱动生态系统，量化价值和信任。</div>
         <img src="@/assets/img/chahua_Pro.png" class="w-[282px] <xl:w-[141px] h-[278px] <xl:h-[139px] mt-[59px] <xl:mx-auto <xl:mt-[30px] div-1 animated-div" :class="isSmallScreen ? 'div-1-p':''" />
       </div>
       <div class="collapseBox <xl:mt-[20px]" ref="buttonsContainer">

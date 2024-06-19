@@ -5,10 +5,10 @@
 				<img src="@/assets/img/icon_1.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
 				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
           <span v-if="$i18n.locale === 'en'">
-            Driving innovation in decentralized finance <span class="text-[#FFEE02]">since 2013</span>
+            Driving innovation in decentralized business finance <span class="text-[#FFEE02]">since 2013</span>
           </span>
           <span v-else>
-            自<span class="text-[#FFEE02]">2013年</span>以来推动去中心化<br class="<xl:hidden">金融创新
+            自<span class="text-[#FFEE02]">2013年</span>以来推动去中心化<br class="<xl:hidden">金融生态创新
           </span>
         </div>
 			</div>
@@ -16,10 +16,10 @@
 				<img src="@/assets/img/icon_2.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
 				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
           <span v-if="$i18n.locale === 'en'">
-            Pioneers in Decentralized <span class="text-[#FFEE02]">Autonomous Fund Organization</span>
+            Pioneers in Decentralized business <span class="text-[#FFEE02]">Autonomous Fund Organization</span>
           </span>
           <span v-else>
-            分布式<span class="text-[#FFEE02]">自治基金</span><br>组织的先驱
+            分布式商业<span class="text-[#FFEE02]">自治基金</span><br>组织的先驱
           </span>
         </div>
 			</div>
@@ -27,7 +27,7 @@
 				<img src="@/assets/img/icon_3.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
 				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
           <span v-if="$i18n.locale === 'en'">
-            <span class="text-[#FFEE02]">Over 30,000 active users</span> and growing
+            <span class="text-[#FFEE02]">Over 30,000 active users</span><br class="<xl:hidden"> and growing
           </span>
           <span v-else>
             <span class="text-[#FFEE02]">超过30,000</span>个活跃用户<br class="<xl:hidden">且在不断增长

@@ -21,10 +21,10 @@
       
       <canvas class="mx-auto" ref="canvas" :width="isSmallScreen?400:560" :height="isSmallScreen?400:560"></canvas>
       
-      <div class="platform platform1 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[0px] <xl:top-[40px] left-[-20px] <xl:left-[13%]">Facebook</div>
-      <div class="platform platform2 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[40px] <xl:top-[70px] left-[240px] <xl:left-[53%]">Telegram</div>
-      <div class="platform platform3 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[240px] <xl:top-[160px] left-[-20px] <xl:left-[13%]">Youtube</div>
-      <div class="platform platform4 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[280px]  <xl:top-[190px] left-[240px] <xl:left-[53%]">Twitter</div>
+      <div class="platform platform1 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[0px] <xl:top-[40px] left-[-50px] <xl:left-[13%]">Facebook</div>
+      <div class="platform platform2 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[40px] <xl:top-[70px] left-[220px] <xl:left-[53%]">Telegram</div>
+      <div class="platform platform3 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[240px] <xl:top-[160px] left-[-50px] <xl:left-[13%]">Youtube</div>
+      <div class="platform platform4 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[280px]  <xl:top-[190px] left-[220px] <xl:left-[53%]">Twitter</div>
 
     </div>
 
