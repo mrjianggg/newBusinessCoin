@@ -1,33 +1,35 @@
 <template>
   <!-- NBC Token -->
-  <div class="pt-[125px] mt-[150px] NBCTokenBox" id="nbcTokenId">
-    <div class="title1" style="font-family: 'F';">NBC Token</div>
-    <div class="mt-3 text-[#EAECEF] text-lg font-medium leading-[30px] w-[800px]">{{ $t('nBCToken.Witha') }}</div>
-    <div class="mt-[60px] w-full h-[680px] flex items-center" style="border: 1px solid #222222;border-radius: 3%;">
+  <div class="pt-[125px] <xl:pt-[25px] mt-[150px] <xl:mt-[50px] <xl:px-[20px] NBCTokenBox" id="nbcTokenId">
+    <div class="title1 mx-auto my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[60px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';">NBC Token</div>
+    <div class="mt-3 <xl:mt-0 text-[#EAECEF] text-lg <xl:text-[14px] <xl:leading-[20px] font-medium leading-[30px]">{{ $t('nBCToken.Witha') }}</div>
+    <div class="mt-[60px] w-full h-[680px] <xl:h-auto flex items-center <xl:block border-[1px] <xl:border-[0px] border-solid border-[#222222]" style="border-radius: 3%;">
+      <!-- 饼图 -->
       <div class="relative">
-        <div ref="chartContainer" class="chart-container"></div>
+        <div ref="chartContainer" class="w-[600px] <xl:w-[300px] h-[400px] <xl:h-[190px] mx-auto my-auto"></div>
         <div class="absolute flex flex-col justify-center items-center" style="transform: translate(-50%,-50%);top: 50%;left: 50%;">
-          <div class="text-sm text-[#EAECEF] leading-[24px] font-medium">{{ $t('nBCToken.TotalSupply') }}</div>
-          <div style="font-family: 'F';" class="font-bold text-[26px] text-[#FFF304] leading-[34px]">1,000,000,000</div>
+          <div class="text-sm <xl:text-[12px] text-[#EAECEF] leading-[24px] font-medium">{{ $t('nBCToken.TotalSupply') }}</div>
+          <div style="font-family: 'F';" class="font-bold text-[26px] <xl:text-[15px] text-[#FFF304] leading-[34px]">1,000,000,000</div>
         </div>
       </div>
+
       <div class="ml-3" ref="buttonsContainer">
-        <div class="NBCToken_item1 NBCToken_item w-[460px] h-[122px] pl-6 infoItem" scale-up :style="{ '--order': 1 }">
+        <div class="NBCToken_item1 NBCToken_item w-[460px] <xl:w-full <xl:h-[104px] h-[122px] pl-6 infoItem" scale-up :style="{ '--order': 1 }">
           <div class="font-bold text-lg text-white leading-[30px]">{{ $t('nBCToken.OperationPool') }}</div>
           <div class="mt-[4px] font-normal text-sm text-[#929495] leading-[24px]">{{ $t('nBCToken.andsettlement') }}</div>
         </div>
 
-        <div class="NBCToken_item2 NBCToken_item w-[460px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
+        <div class="NBCToken_item2 NBCToken_item w-[460px] <xl:w-full <xl:h-[104px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
           <div class="font-bold text-lg text-white leading-[30px]">{{ $t('nBCToken.EcologicalMining') }}</div>
           <div class="mt-[4px] font-normal text-sm text-[#929495] leading-[24px]">{{ $t('nBCToken.noderewards') }}</div>
         </div>
 
-        <div class="NBCToken_item3 NBCToken_item w-[460px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
+        <div class="NBCToken_item3 NBCToken_item w-[460px] <xl:w-full <xl:h-[104px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
           <div class="font-bold text-lg text-white leading-[30px]">{{ $t('nBCToken.GenesisPool') }}</div>
           <div class="mt-[4px] font-normal text-sm text-[#929495] leading-[24px]">{{ $t('nBCToken.technicalteams') }}</div>
         </div>
 
-        <div class="NBCToken_item4 NBCToken_item w-[460px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
+        <div class="NBCToken_item4 NBCToken_item w-[460px] <xl:w-full <xl:h-[104px] h-[122px] pl-6 mt-4 infoItem" scale-up :style="{ '--order': 1 }">
           <div class="font-bold text-lg text-white leading-[30px]">{{ $t('nBCToken.CharitableEcosystem') }}</div>
           <div class="mt-[4px] font-normal text-sm text-[#929495] leading-[24px]">{{ $t('nBCToken.socialcontributions') }}</div>
         </div>
@@ -246,10 +248,6 @@ export default defineComponent({
   width: 100%;
   position: relative;
   .title1{
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
-    text-align: center;
 
     background: linear-gradient(134deg, #FFEE02 0%, #FFFFFF 29%, #FFFCD1 100%);
     -webkit-background-clip: text;
@@ -259,11 +257,7 @@ export default defineComponent({
     color: transparent;
     display: inline-block; /* 确保背景应用于文本的内容 */
   }
-  .chart-container {
-    width: 600px;
-    height: 400px;
-    margin: auto;
-  }
+
 
   .NBCToken_item {
       border: 1px solid #222222;

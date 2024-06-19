@@ -1,12 +1,40 @@
 <template>
   <!-- Backer -->
-  <div class="pt-[178px] mt-[100px] BackerBox" id="backerId">
-    <div class="title1" style="font-family: 'F';" v-if="$i18n.locale === 'en'">THE ECOSYSTEM</div>
-    <div class="title2 mt-2" style="font-family: 'F';" v-if="$i18n.locale === 'en'">BACKED BY THE BEST</div>
-    <div class="title1" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC投资者生态系统</div>
-    <div class="mt-3 text-lg font-normal text-[#EAECEF]" v-if="$i18n.locale !== 'en'">成为全球金融变革的推动者，探索无限机遇</div>
-    <div class="mt-[60px] w-full h-[370px] flex items-center" style="border: 1px solid #222222;border-radius: 3%;">
+  <div class="pt-[178px] <xl:pl-[20px] <xl:pt-[28px] mt-[100px] <xl:mt-[40px] BackerBox" id="backerId">
+    <div class="title1 font-bold text-[30px] <xl:text-[22px] <xl:leading-[30px] leading-[48px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">THE ECOSYSTEM</div>
+    <div class="title2 mt-2 font-bold text-[40px] <xl:text-[22px] <xl:leading-[28px] leading-[60px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale === 'en'">BACKED BY THE BEST</div>
+    <div class="title1 font-bold text-[30px] <xl:text-[22px] <xl:leading-[48px] leading-[48px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">NBC投资者生态系统</div>
+    <div class="mt-3 <xl:mt-0 text-lg <xl:text-[14px] font-normal text-[#EAECEF] <xl:text-left <xl:w-full" v-if="$i18n.locale !== 'en'">成为全球金融变革的推动者，探索无限机遇</div>
+    <div class="xl:hidden mt-[60px] <xl:mt-[0px] w-full flex items-center">
+      <div class="infoBox scrolling-container mt-6 px-[125px] <xl:px-[15px] <xl:px-[15px] py-[65px] <xl:py-[15px]" ref="buttonsContainer">
+        <div class="scrolling-wrapper" ref="scrollingWrapper">
+          <!-- 渲染图片 -->
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index}.png`)" class="w-[83px] h-[50px]"  >
+          </div>
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index}.png`)" class="w-[83px] h-[50px]"  >
+          </div>
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index}.png`)" class="w-[83px] h-[50px]"  >
+          </div>
+        </div>
+        <div class="scrolling-wrapper" ref="scrollingWrapper">
+          <!-- 渲染图片 -->
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index+5}.png`)" class="w-[83px] h-[50px]" >
+          </div>
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index+5}.png`)" class="w-[83px] h-[50px]" >
+          </div>
+          <div v-for="index in 5" :key="index" class="scrolling-item">
+            <img :src="require(`@/assets/img/backer${index+5}.png`)" class="w-[83px] h-[50px]" >
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="<xl:hidden mt-[60px] w-full h-[370px] flex items-center" style="border: 1px solid #222222;border-radius: 3%;">
       <div class="infoBox mt-6 px-[125px] py-[65px] div-2 animatedDiv" ref="buttonsContainer">
         <div
           v-for="index in 10"
@@ -18,7 +46,6 @@
           <img :src="require(`@/assets/img/backer${index}.png`)" class="w-[166px] h-[100px]" />
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -84,10 +111,6 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   .title1{
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 48px;
-    text-align: center;
 
     background: linear-gradient(134deg, #FFEE02 0%, #FFFFFF 29%, #FFFCD1 100%);
     -webkit-background-clip: text;
@@ -98,10 +121,6 @@ export default defineComponent({
     display: inline-block; /* 确保背景应用于文本的内容 */
   }
   .title2{
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
-    text-align: center;
 
     background: linear-gradient(134deg, #FFEE02 0%, #FFFFFF 29%, #FFFCD1 100%);
     -webkit-background-clip: text;
@@ -116,7 +135,30 @@ export default defineComponent({
     flex-wrap: wrap; /* 让图片自动换行 */
     justify-content: space-between; /* 图片居中 */
   }
-
+  .scrolling-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    .scrolling-wrapper {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+    
+    .scrolling-item {
+      min-width: 83px; /* 图片宽度，可以根据需要调整 */
+      margin-right: 10px; /* 图片之间的间距 */
+    }
+    
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  }
 }
 </style>
 <style scoped>

@@ -1,27 +1,31 @@
 <template>
   <!-- NBC Token -->
-  <div class="pt-[140px] CommunityBox flex items-center justify-between" id="communityId">
-    <div>
-      <div class="title1" style="font-family: 'F';" v-if="$i18n.locale === 'en'">JOIN THE</div>
+  <div class="pt-[140px] <xl:pt-[30px] CommunityBox flex items-center justify-between <xl:block" id="communityId">
+    <div class="<xl:flex <xl:flex-col <xl:items-center">
+      <div class="title1 text-[22px] leading-[30px]" style="font-family: 'F';" v-if="$i18n.locale === 'en'">JOIN THE</div>
       <br>
-      <div class="title1" style="font-family: 'F';" v-if="$i18n.locale === 'en'">NBC COMMUNITY NOW</div>
-      <div class="title1" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">立刻加入NBC社区</div>
-      <div class="mt-4 text-[#929495] text-base font-normal leading-[26px] w-[520px]">
+      <div class="title1 text-[22px] leading-[30px]" style="font-family: 'F';" v-if="$i18n.locale === 'en'">NBC COMMUNITY NOW</div>
+      <div class="title1 text-[22px] leading-[30px]" style="font-family: 'F';" v-if="$i18n.locale !== 'en'">立刻加入NBC社区</div>
+      <div class="mt-4 <xl:mt-2 text-[#929495] text-base <xl:text-[14px] font-normal leading-[26px] <xl:leading-[26px] w-[520px] <xl:text-center <xl:w-[330px]">
         <span v-if="$i18n.locale === 'en'">Become a part of the revolutionary financial ecosystem. Join the NBC community today and contribute to a future of wealth sharing and abundant opportunities.</span>
         <span v-else>成为革命性金融生态系统的一员。
           今天就加入NBC社区，为财富共享和充满机遇的未来作出贡献。</span>
       </div>
-      <div class="w-[178px] h-[56px] bg-[#FFEE02] rounded-[30px] flex items-center justify-center cursor-pointer font-bold text-base text-black mt-[48px]">
+      <div class="<xl:w-[108px] w-[178px] h-[56px] <xl:h-[38px] bg-[#FFEE02] rounded-[30px] flex items-center justify-center cursor-pointer font-bold text-base <xl:text-[14px] text-black mt-[48px] <xl:mt-[18px]">
         <span v-if="$i18n.locale === 'en'">Follow us</span>
         <span v-else>加入我们</span>
       </div>
     </div>
-    <div class="relative text-white text-lg">
-      <canvas ref="canvas" width="560" height="560"></canvas>
-      <div class="platform platform1 pb-[41px] w-[242px] h-[222px] absolute top-[0px] left-[-80px]">Facebook</div>
-      <div class="platform platform2 pb-[41px] w-[242px] h-[222px] absolute top-[40px] left-[180px]">Telegram</div>
-      <div class="platform platform3 pb-[41px] w-[242px] h-[222px] absolute top-[240px] left-[-80px]">Youtube</div>
-      <div class="platform platform4 pb-[41px] w-[242px] h-[222px] absolute top-[280px] left-[180px]">Twitter</div>
+    <div class="relative text-white text-lg <xl:w-[400px] <xl:h-[400px] <xl:w-full <xl:mx-auto">
+      <!-- <canvas class="<xl:hidden" ref="canvas" width="560" height="560"></canvas> -->
+      
+      <canvas class="mx-auto" ref="canvas" :width="isSmallScreen?400:560" :height="isSmallScreen?400:560"></canvas>
+      
+      <div class="platform platform1 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[0px] <xl:top-[40px] left-[-20px] <xl:left-[13%]">Facebook</div>
+      <div class="platform platform2 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[40px] <xl:top-[70px] left-[240px] <xl:left-[53%]">Telegram</div>
+      <div class="platform platform3 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[240px] <xl:top-[160px] left-[-20px] <xl:left-[13%]">Youtube</div>
+      <div class="platform platform4 pb-[41px] <xl:pb-[20px] w-[242px] <xl:w-[121px] h-[222px] <xl:h-[111px] absolute top-[280px]  <xl:top-[190px] left-[240px] <xl:left-[53%]">Twitter</div>
+
     </div>
 
   </div>
@@ -34,19 +38,30 @@ export default {
     return{
       buttonsContainer: null,
       observer: null,
+      screenWidth: window.innerWidth,
     }
   },
   mounted() {
     // 在组件挂载时开始绘制和动画
     this.drawAndAnimate();
     this.initObserver();
+    window.addEventListener('resize', this.updateWidth);
   },
   destroyed() {
     if (this.observer) {
       this.observer.disconnect();
     }
+    window.removeEventListener('resize', updateWidth);
+  },
+  computed: {
+    isSmallScreen(){
+      return this.screenWidth < 1280;
+    },
   },
   methods: {
+    updateWidth() {
+      this.screenWidth = window.innerWidth;
+    },
     initObserver() {
       const options = {
         threshold: 0.2 // 当目标元素 20% 可见时触发回调
@@ -71,8 +86,8 @@ export default {
       const ctx = canvas.getContext('2d');
 
       // 设置两个圆的属性
-      const radius1 = 260; // 第一个圆的半径
-      const radius2 = 210; // 第二个圆的半径
+      const radius1 = this.isSmallScreen ? 150:260; // 第一个圆的半径
+      const radius2 = this.isSmallScreen ? 130:210; // 第二个圆的半径
       const centerX1 = canvas.width / 2; // 第一个圆的中心 X 坐标
       const centerY1 = canvas.height / 2; // 第一个圆的中心 Y 坐标
       const centerX2 = canvas.width / 2 - 10; // 第二个圆的中心 X 坐标，稍微右移一些以重叠
@@ -150,8 +165,7 @@ export default {
   width: 100%;
   .title1{
     font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
+
     text-align: center;
 
     background: linear-gradient(134deg, #FFEE02 0%, #FFFFFF 29%, #FFFCD1 100%);

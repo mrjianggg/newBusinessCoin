@@ -1,18 +1,17 @@
 <template>
   <!-- Product Architecture -->
-  <div class="pt-[163px] productBox" id="productId">
-    <div class="title" style="font-family: 'F';">{{ $t('product.title') }}</div>
-    <img src="@/assets/img/icon_text.png" class="w-[132px] h-[34px] mt-[79px]" />
-    <div class="mt-[15px] flex justify-between">
+  <div class="pt-[163px] <xl:pt-[63px] <xl:px-[20px] productBox">
+    <div class="title mx-auto my-0 font-bold text-[40px] <xl:text-[22px] leading-[60px] <xl:leading-[30px] text-center <xl:text-left <xl:w-full" style="font-family: 'F';">{{ $t('product.title') }}</div>
+    <img src="@/assets/img/icon_text.png" class="w-[132px] h-[34px] mt-[79px] <xl:hidden" />
+    <div class="mt-[15px] <xl:mt-[0] flex justify-between <xl:block">
       <div>
-        <div class="title2 text-[24px] leading-[44px]" v-if="$i18n.locale === 'en'">Learn How New Business Coin Works</div>
-        <div class="title2 text-[24px] leading-[44px]" v-if="$i18n.locale !== 'en'">NBC通证AI系统通过神经网络和</div>
-        <div class="title2 text-[24px] leading-[44px]" v-if="$i18n.locale !== 'en'">大数据驱动生态系统，量化价值和信任。</div>
-        <img src="@/assets/img/chahua_Pro.png" class="w-[282px] h-[278px] mt-[59px] div-1 animated-div" />
+        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale === 'en'">Learn How New Business Coin Works</div>
+        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">NBC通证AI系统通过神经网络和</div>
+        <div class="title2 text-[24px] <xl:text-[15px] leading-[44px] <xl:leading-[25px]" v-if="$i18n.locale !== 'en'">大数据驱动生态系统，量化价值和信任。</div>
+        <img src="@/assets/img/chahua_Pro.png" class="w-[282px] <xl:w-[141px] h-[278px] <xl:h-[139px] mt-[59px] <xl:mx-auto <xl:mt-[30px] div-1 animated-div" :class="isSmallScreen ? 'div-1-p':''" />
       </div>
-      <div class="collapseBox" ref="buttonsContainer">
-
-        <van-collapse v-model="activeNames1" :border="false" class="w-[600px] p-0 infoItem" scale-up :style="{ '--order': 1 }">
+      <div class="collapseBox <xl:mt-[20px]" ref="buttonsContainer">
+        <van-collapse v-model="activeNames1" :border="false" class="w-[600px] <xl:w-full p-0 infoItem" scale-up :style="{ '--order': 1 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
               <div class="flex items-center text-white font-medium text-lg">
@@ -20,72 +19,72 @@
                 {{ $t('product.AISystem') }}
               </div>
             </template>
-            <div class="text-sm text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
               {{ $t('product.andtrust') }}
             </div>
           </van-collapse-item>
         </van-collapse>
-        <div class="fengexian"></div>
+        <div class="fengexian mt-[21px] <xl:mt-[12px]"></div>
 
-        <van-collapse v-model="activeNames2" :border="false" class="w-[600px] p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 2 }">
+        <van-collapse v-model="activeNames2" :border="false" class="w-[600px] <xl:w-full p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 2 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
-              <div class="flex items-center text-white font-medium text-lg">
+              <div class="flex items-center text-white font-medium text-lg <xl:text-[14px]">
                 <div class="h-2 w-2 rounded-1 bg-[#FFEE02] mr-[10px]"></div>
                 {{ $t('product.CreditSystem') }}
               </div>
             </template>
-            <div class="text-sm text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
               {{ $t('product.InitialCredit') }}
             </div>
           </van-collapse-item>
         </van-collapse>
-        <div class="fengexian"></div>
+        <div class="fengexian mt-[21px] <xl:mt-[12px]"></div>
 
-        <van-collapse v-model="activeNames3" :border="false" class="w-[600px] p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 3 }">
+        <van-collapse v-model="activeNames3" :border="false" class="w-[600px] <xl:w-full p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 3 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
-              <div class="flex items-center text-white font-medium text-lg">
+              <div class="flex items-center text-white font-medium text-lg <xl:text-[14px]">
                 <div class="h-2 w-2 rounded-1 bg-[#FFEE02] mr-[10px]"></div>
                 {{ $t('product.IndustryInsight') }}
               </div>
             </template>
-            <div class="text-sm text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
               {{ $t('product.NBCemploys') }}
             </div>
           </van-collapse-item>
         </van-collapse>
-        <div class="fengexian"></div>
+        <div class="fengexian mt-[21px] <xl:mt-[12px]"></div>
 
-        <van-collapse v-model="activeNames4" :border="false" class="w-[600px] p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 4 }">
+        <van-collapse v-model="activeNames4" :border="false" class="w-[600px] <xl:w-full p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 4 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
-              <div class="flex items-center text-white font-medium text-lg">
+              <div class="flex items-center text-white font-medium text-lg <xl:text-[14px]">
                 <div class="h-2 w-2 rounded-1 bg-[#FFEE02] mr-[10px]"></div>
                 {{ $t('product.DecentralizedGovernance') }}
               </div>
             </template>
-            <div class="text-sm text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
               {{ $t('product.efficientgovernance') }}
             </div>
           </van-collapse-item>
         </van-collapse>
-        <div class="fengexian"></div>
+        <div class="fengexian mt-[21px] <xl:mt-[12px]"></div>
 
-        <van-collapse v-model="activeNames5" :border="false" class="w-[600px] p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 5 }">
+        <van-collapse v-model="activeNames5" :border="false" class="w-[600px] <xl:w-full p-0 mt-[27px] infoItem" scale-up :style="{ '--order': 5 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
-              <div class="flex items-center text-white font-medium text-lg">
+              <div class="flex items-center text-white font-medium text-lg <xl:text-[14px]">
                 <div class="h-2 w-2 rounded-1 bg-[#FFEE02] mr-[10px]"></div>
                 {{ $t('product.ComprehensiveEcosystem') }}
               </div>
             </template>
-            <div class="text-sm text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
               {{ $t('product.overallutility') }}
             </div>
           </van-collapse-item>
         </van-collapse>
-        <div class="fengexian"></div>
+        <div class="fengexian mt-[21px] <xl:mt-[12px]"></div>
 
       </div>
     </div>
@@ -93,7 +92,7 @@
 </template>
 
 <script>
-import { defineComponent, onMounted, ref, onUnmounted ,onBeforeUnmount} from 'vue';
+import { defineComponent, onMounted, ref, onUnmounted ,onBeforeUnmount , computed} from 'vue';
 export default defineComponent({
   name: 'MyProduct',
   setup(props, { emit }) {
@@ -128,14 +127,21 @@ export default defineComponent({
       }
     };
 
+    const screenWidth = ref(window.innerWidth);
+    const updateWidth = () => {
+      screenWidth.value = window.innerWidth;
+    };
+    const isSmallScreen = computed(() => screenWidth.value < 1280);
     onMounted(() => {
       initObserver();
+      window.addEventListener('resize', updateWidth);
     });
 
     onBeforeUnmount(() => {
       if (observer) {
         observer.disconnect();
       }
+      window.removeEventListener('resize', updateWidth);
     });
 
     const activeNames1 = ref([])
@@ -144,6 +150,7 @@ export default defineComponent({
     const activeNames4 = ref([])
     const activeNames5 = ref([])
     return {
+      isSmallScreen,
       buttonsContainer,
       activeNames1,
       activeNames2,
@@ -161,11 +168,6 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   .title{
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 60px;
-    text-align: center;
 
     background: linear-gradient(134deg, #FFEE02 0%, #FFFFFF 29%, #FFFCD1 100%);
     -webkit-background-clip: text;
@@ -196,7 +198,6 @@ export default defineComponent({
       background: transparent;
     }
     .fengexian{
-      margin-top: 21px;
       width: 100%;
       height: 0;
       border-top: 1px solid #222222;
@@ -249,8 +250,15 @@ export default defineComponent({
 	.div-1 {
 		transform: translateX(-200px); /* 初始位置在屏幕左边外 */
 	}
+	.div-1-p {
+		transform: translateX(-50px); /* 初始位置在屏幕左边外 */
+	}
 	/* 可见时的动画 */
 	.in-view.div-1 {
+		transform: translateX(0); /* 左侧 div 移动到原位置 */
+		opacity: 1;
+	}
+	.in-view.div-1-p {
 		transform: translateX(0); /* 左侧 div 移动到原位置 */
 		opacity: 1;
 	}

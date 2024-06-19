@@ -3,6 +3,8 @@ import { createI18n } from 'vue-i18n'
 const messages = {
   en: {
     language: 'EN',
+    zhongwen: 'Chinese',
+    yinwen: 'English',
     navigation: {
       'Aboutus': 'About us',
       'ProductArchitecture': 'Product Architecture',
@@ -63,6 +65,8 @@ const messages = {
     },
   },
   zh: {
+    zhongwen: '中文',
+    yinwen: '英文',
     language: 'CN',
     navigation: {
       'Aboutus': '关于我们',

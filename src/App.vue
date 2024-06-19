@@ -2,7 +2,7 @@
     <div class="content-page" :style="$i18n.locale === 'en'?`font-family: 'G'`:`font-family: 'PingFang SC'`" id="app">
 			<!-- 导航 -->
 			<my-navigation ref="MenuBar" @menuActive="menuActive" :isTop="isTop" />
-			<div class="content-main mx-auto w-[1200px]" >
+			<div class="content-main mx-auto  <xl:w-full xl:w-[1200px]" >
 
 				<!-- About us -->
 				<AboutUs @menuScroll="menuScroll" />
@@ -23,20 +23,6 @@
 				<!-- Community -->
 				<Community @menuScroll="menuScroll" />
 
-				<!-- <div id="aboutUsId">
-					<div class="w-full h-5 bg-gray-400 mt-2" v-for="i in 22" :key="i + 'a'">aboutUsId{{i + 'a'}}</div>
-				</div>
-				
-
-				<div id="productId">
-					<div class="w-full h-5 bg-red-200 mt-2" v-for="j in 22" :key="j + 'b'">{{j + 'b'}}</div>
-				</div>
-
-				<div id="nbcTokenId">
-					<div class="w-full h-5 bg-yellow-300 mt-2" v-for="j in 22" :key="j + 'b'">{{j + 'b'}}</div>
-				</div>
-
-				<el-button type="primary" @click="menuActive(1)" class="fixed top-32 right-5">定位</el-button> -->
 			</div>
 			<Footer />
     </div>
@@ -129,9 +115,5 @@ export default {
 	overflow-y: auto;
 	z-index: 2;
 	position: relative;
-}
-.content-main{
-
-
 }
 </style>
