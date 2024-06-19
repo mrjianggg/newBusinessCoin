@@ -1,9 +1,12 @@
-# test-vue
+# New Business Coin
 
 ## Project setup
 ```
 yarn install
 ``` 
+
+### Visit website
+https://newbusinesscoin.com/
 
 ### Compiles and hot-reloads for development
 ```

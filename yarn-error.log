@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "test-vue",
+    "name": "new-business-coin",
     "version": "0.1.0",
     "private": true,
     "scripts": {
