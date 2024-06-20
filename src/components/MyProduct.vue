@@ -14,12 +14,12 @@
         <van-collapse v-model="activeNames1" :border="false" class="w-[600px] <xl:w-full p-0 infoItem" scale-up :style="{ '--order': 1 }">
           <van-collapse-item name="1" :border="false">
             <template #title>
-              <div class="flex items-center text-white font-medium text-lg">
+              <div class="flex items-center text-white font-medium text-lg <xl:text-[14px]">
                 <div class="h-2 w-2 rounded-1 bg-[#FFEE02] mr-[10px]"></div>
                 {{ $t('product.AISystem') }}
               </div>
             </template>
-            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] <xl:leading-[20px] font-normal mt-[5px]">
               {{ $t('product.andtrust') }}
             </div>
           </van-collapse-item>
@@ -34,7 +34,7 @@
                 {{ $t('product.CreditSystem') }}
               </div>
             </template>
-            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] <xl:leading-[20px] font-normal mt-[5px]">
               {{ $t('product.InitialCredit') }}
             </div>
           </van-collapse-item>
@@ -49,7 +49,7 @@
                 {{ $t('product.IndustryInsight') }}
               </div>
             </template>
-            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] <xl:leading-[20px] font-normal mt-[5px]">
               {{ $t('product.NBCemploys') }}
             </div>
           </van-collapse-item>
@@ -64,7 +64,7 @@
                 {{ $t('product.DecentralizedGovernance') }}
               </div>
             </template>
-            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] <xl:leading-[20px] font-normal mt-[5px]">
               {{ $t('product.efficientgovernance') }}
             </div>
           </van-collapse-item>
@@ -79,7 +79,7 @@
                 {{ $t('product.ComprehensiveEcosystem') }}
               </div>
             </template>
-            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] font-normal mt-[5px]">
+            <div class="text-sm <xl:text-[12px] text-[#929495] leading-[26px] <xl:leading-[20px] font-normal mt-[5px]">
               {{ $t('product.overallutility') }}
             </div>
           </van-collapse-item>

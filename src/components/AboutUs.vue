@@ -1,7 +1,7 @@
 <template>
   <!-- About us -->
   <div class="AboutUsBox pt-[166px] <xl:pt-[80px]" id="aboutUsId">
-      <div class="main-title font-bold">
+      <div class="main-title font-black">
         <p class="title-text3 text-[30px] <xl:text-[20px] leading-[36px] <xl:leading-[18px]" style="font-family: 'F';" v-if="$i18n.locale === 'en'">GLOBAL FIRST</p>
         <p class="title-text text-[40px] <xl:text-[20px] <xl:leading-[30px] leading-[60px] <xl:leading-[30px] mt-2 <xl:mt-1" style="font-family: 'F';">{{ $t('AboutUs.DISTRIBUTED') }}</p>
         <p class="title-text text-[40px] <xl:text-[20px] <xl:leading-[30px] leading-[60px] <xl:leading-[30px] mt-1 <xl:mt-0" style="font-family: 'F';"><span>{{ $t('AboutUs.ORGANIZATION') }}</span> <span class="title-text2">DACO</span></p>

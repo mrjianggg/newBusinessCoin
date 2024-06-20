@@ -3,7 +3,7 @@
 		<div class="mt-[156px] <xl:mt-[76px] flex justify-center">
 			<div  :class="isSmallScreen ? 'div-1-p':''" class="mr-[100px] <xl:mr-[5px] div-1 animated-div">
 				<img src="@/assets/img/icon_1.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
-				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
+				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px] <xl:leading-[16px]">
           <span v-if="$i18n.locale === 'en'">
             Driving innovation in decentralized business finance <span class="text-[#FFEE02]">since 2013</span>
           </span>
@@ -14,7 +14,7 @@
 			</div>
 			<div :class="isSmallScreen ? 'div-2-p':''" class="mr-[100px] <xl:mr-[5px] div-2 animated-div">
 				<img src="@/assets/img/icon_2.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
-				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
+				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px] <xl:leading-[16px]">
           <span v-if="$i18n.locale === 'en'">
             Pioneers in Decentralized business <span class="text-[#FFEE02]">Autonomous Fund Organization</span>
           </span>
@@ -25,7 +25,7 @@
 			</div>
 			<div :class="isSmallScreen ? 'div-3-p':''" class="div-3 animated-div">
 				<img src="@/assets/img/icon_3.png" class="w-[48px] <xl:w-[24px] h-[48px] <xl:h-[24px] mx-auto" />
-				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px]">
+				<div style="text-align: center;" class="w-[280px] <xl:w-[120px] mt-10 <xl:mt-5 font-semibold text-base <xl:text-[12px] text-[#929495] leading-[24px] <xl:leading-[16px]">
           <span v-if="$i18n.locale === 'en'">
             <span class="text-[#FFEE02]">Over 30,000 active users</span><br class="<xl:hidden"> and growing
           </span>
