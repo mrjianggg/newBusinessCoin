@@ -7,24 +7,24 @@
 	color: #ffffff;
 }
 
-
+</* opentype */>
 @font-face {
   font-family: 'G';
-  src: url('@/assets/font/Gilroy-Regular.otf') format('opentype');
+  src: url('@/assets/font/Gilroy-Regular.otf') format('otf'); 
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'F';
-  src: url('@/assets/font/Futura-Bold.ttf') format('truetype');
+  src: url('@/assets/font/Futura-Bold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'A';
-  src: url('@/assets/font/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+  src: url('@/assets/font/AlimamaShuHeiTi-Bold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
