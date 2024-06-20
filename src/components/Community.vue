@@ -195,7 +195,7 @@ export default {
     background-image: url('~@/assets/img/icon_Youtube.png');
   }
   .platform4{
-    background-image: url('~@/assets/img/icon_Telegram.png');
+    background-image: url('~@/assets/img/icon_Twitter.png');
   }
 }
 </style>

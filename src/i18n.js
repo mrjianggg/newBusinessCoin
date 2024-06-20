@@ -103,7 +103,7 @@ const messages = {
       OperationPool: '50% 生态运营池 (NBC基金会)',
       andsettlement: '5亿枚用于商业和金融生态系统的价值整合与结算。',
       EcologicalMining: '30% 生态矿池',
-      noderewards: '5亿枚用于商业和金融生态系统的价值整合与结算。',
+      noderewards: '3亿枚用于社群POA挖矿与节点奖励。',
       GenesisPool: '10% 创世池',
       technicalteams: '1亿枚用于激励创始团队与技术团队。',
       CharitableEcosystem: '10% 慈善生态',
